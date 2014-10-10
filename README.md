@@ -1,4 +1,4 @@
 nltk-aarhus
 ===========
 
-Code for Research Workshop I: Computational Linguistics
+Code examples for Research Workshop I: Computational Linguistics
