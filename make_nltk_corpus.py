@@ -4,7 +4,7 @@
 import nltk
 from operator import itemgetter
 import codecs
-import pickle
+import pickle #pickle lets you save ready python objects in a file on your computer, from which you can load them again later
 import os
 import xml.etree.ElementTree as ET
 from nltk.corpus.reader.tagged import CategorizedTaggedCorpusReader
