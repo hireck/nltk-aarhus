@@ -6,14 +6,10 @@ from operator import itemgetter
 import codecs
 import pickle
 import os
-import xml.etree.ElementTree as etree
+import xml.etree.ElementTree as ET
 from nltk.corpus.reader.tagged import CategorizedTaggedCorpusReader
 
-#corpus_root = '/media/data/lectures_aarhus/nltk_python/Parole'
-#fileid = 'parole-dk.tei.utf8.xml'
-#parole = nltk.corpus.XMLCorpusReader(corpus_root, [fileid])
-
-xml = etree.parse('/media/data/lectures_aarhus/nltk_python/Parole/parole-dk.tei.utf8.xml')
+xml = ET.parse('/media/data/lectures_aarhus/nltk_python/Parole/parole-dk.tei.utf8.xml')
 
 catcodes = {}
 cats = xml.iter('category')
@@ -48,7 +44,6 @@ for tei in teis:
     outfile = codecs.open(os.path.join('parole_nltk', idf), 'w', 'utf-8')
     outfile.write('\n\n'.join(write_sents))
 
-#pickle.dump(categories, open('parole_nltk/categories.pickle', 'w'))
 pickle.dump(categories, open('parole_categories.pickle', 'w'))
 
 
